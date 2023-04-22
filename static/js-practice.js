@@ -35,7 +35,22 @@ document
 An Agreeable Form
 *************** */
 
-// Your Code Here
+const handleAgreeableForm = (evt) => {
+  evt.preventDefault();
+
+  const faveFood = document
+    .querySelector("#favorite-food-input")
+    .value.toLowerCase();
+  const msg = `I like ${faveFood}, too`;
+
+  document
+    .querySelector("#agreeable-text")
+    .insertAdjacentHTML("beforeend", `<p>${msg}</p>`);
+};
+
+document
+  .querySelector("#agreeable-form [type=submit]")
+  .addEventListener("click", handleAgreeableForm);
 
 /** ****************
 Five colored primes
