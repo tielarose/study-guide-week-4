@@ -12,7 +12,24 @@ document.querySelector("#popup-alert-button").addEventListener("click", () => {
 Practice Your Times Tables
 ************************ */
 
-// Your Code Here
+const handleMultiplyBtn = (evt) => {
+  evt.preventDefault();
+
+  const multsOf = parseInt(document.querySelector("#mults-of").value);
+  const max = parseInt(document.querySelector("#max").value);
+
+  const resultArr = [multsOf];
+
+  for (let i = 2; i * multsOf <= max; i++) {
+    resultArr.push(i * multsOf);
+  }
+
+  console.log(resultArr);
+};
+
+document
+  .querySelector("#multiply-btn")
+  .addEventListener("click", handleMultiplyBtn);
 
 /** **************
 An Agreeable Form
