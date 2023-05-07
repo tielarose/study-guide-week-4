@@ -64,7 +64,25 @@ const PRIME_COLORS = [
   "purple"
 ];
 
-// Your Code Here
+const handlePrimeCirclesButton = (evt) => {
+  evt.preventDefault();
+  const prime_nums = [2, 3, 5, 7, 11];
+
+  for (let i = 0; i < 5; i++) {
+    document
+      .querySelector("#prime-circle-area")
+      .insertAdjacentHTML(
+        "beforeend",
+        `<div class="prime-circle" style="background-color:${
+          PRIME_COLORS[i]
+        };">${prime_nums[i]}</div>`
+      );
+  }
+};
+
+document
+  .querySelector("#make-prime-circles")
+  .addEventListener("click", handlePrimeCirclesButton);
 
 /** *********
 Got Puppies?

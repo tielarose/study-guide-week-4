@@ -3,8 +3,8 @@ body {
   font-family: sans-serif;
 }
 
-input[type='button'],
-input[type='submit'],
+input[type="button"],
+input[type="submit"],
 button {
   padding: 0.5em;
   background-color: powderblue;
@@ -28,7 +28,7 @@ h3 {
 
 h3:before {
   counter-increment: h3counter;
-  content: counter(h3counter) '. ';
+  content: counter(h3counter) ". ";
 }
 
 code {
@@ -47,7 +47,7 @@ code {
 
 .hint:before {
   font-style: italic;
-  content: 'Hint -- hover to reveal';
+  content: "Hint -- hover to reveal";
 }
 
 .hint > div {
@@ -84,4 +84,10 @@ code {
 
 #colorHeadings {
   padding-left: 50px;
+}
+
+.blue {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
 }
