@@ -102,4 +102,14 @@ function showPuppies(results) {
   );
 }
 
-// Your Code Here
+function getPuppies(evt) {
+  evt.preventDefault();
+
+  const numPuppies = document.querySelector("#num-puppies").value;
+
+  fetch(`/puppies.json?num-puppies=${numPuppies}`)
+    .then((response) => response.json())
+    .then((results) => showPuppies(results));
+}
+
+document.querySelector("#puppy-form").addEventListener("submit", getPuppies);
